@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>First Page</title>
+	<script src="jquery-3.1.0.js"></script>
+	<link rel="stylesheet" href="day.css">
+	<style>
+	.emphasis { font-weight: bold;}
+	</style>
+	<script>
+	// $(function() {
+	// 	$('li:first-child').addClass('emphasis');
+	// });
+	$(document).ready(function() {
+		$('li')	.css({
+			color: 'red'
+		});
+	});
+	$(document).ready(function() {
+		$('li:first-child').addClass('emphasis').text('My Name is XYZ');
+	});
+	</script>	
+</head>
+<body>
+
+<ul>
+	<li>hello</li>
+	<li>hello 2</li>
+	<li>hello 3</li>
+</ul>
+<BUTTON>DAY</BUTTON>
+<BUTTON>NIGHT</BUTTON>
+<script>
+	(function () {
+		$('BUTTON').click(function() {
+			var $this=$(this),
+				stylesheet=$this.text().toLowerCase();
+				console.log(stylesheet);
+			$('link').attr('href',stylesheet+'.css');
+
+			$this
+				.siblings('button')
+					.removeAttr('disabled')
+					.end()
+					.attr('disabled','disabled');
+
+		});
+	})();
+</script>
+</body>
+</html>
