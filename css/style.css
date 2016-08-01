@@ -6,7 +6,12 @@ dd{
 
 }
 dl
-{color: red;}
+{
+	color:black;
+	margin:0px;
+	padding:1em 0;
+	border bottom:1em solid black;
+}
 dt{
 	
 }
