@@ -3,19 +3,13 @@ body{
 	color:black;
 }
 dd{
-	color: red;
+	/* color: red; */
 	border bottom: 1px solid;
 }
 dl
 {
-	color:black;
-	margin:0px;
-	padding:1em 0;
-	border bottom:1em solid black;
+	
 }
 dt{
-	color:black;
-	margin:0px;
-	padding:1em 0;
-	border bottom:1em solid black;
+
 }
