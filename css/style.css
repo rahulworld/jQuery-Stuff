@@ -1,15 +1,19 @@
 body{
-	background:white;
+	/* background:#e3e3e3; */
 	color:black;
 }
 dd{
 	/* color: red; */
-	border bottom: 1px solid;
+	border bottom: 1px solid black;
+	margin: auto;
+	text-align: center;
 }
 dl
 {
-	
+	margin: auto;
+	/* padding: 1em 0; */
+	text-align: center;
+	width: 500px;
+	/* padding: 1em 0; */
 }
-dt{
-
-}
+dt{color: red;background: #e3e3e3;margin: auto;padding: 1em 0;border border: 1;border-bottom: 1px solid black;}
