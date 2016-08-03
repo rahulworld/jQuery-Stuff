@@ -5,8 +5,9 @@ body{
 dd{
 	/* color: red; */
 	border bottom: 1px solid black;
-	margin: auto;
+	margin: 1px;
 	text-align: center;
+	padding: 3px;
 }
 dl
 {
