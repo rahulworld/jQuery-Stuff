@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>First Page</title>
+		<script src="js\jquery-3.1.0.js"></script>
+		<link rel="stylesheet" href="css\style.css">
+	</head>
+	<body>
+		<h2>
+		click Me
+		</h2>
+				<h2>
+		click Me
+		</h2>
+				<h2>
+		click Me
+		</h2>
+				<h2>
+		click Me
+		</h2>
+		<script>
+		//use One By one fuction in bind Live Delegate Function Doing uncomment
+		//Bind Function
+		/*
+		(function(){
+			$('h2').bind('click',function(){
+				console.log('clicked');
+			});
+			})();
+		*/
+		//On function
+		/*
+		(function(){
+			$('h2').on('click',function(){
+				console.log('clicked');
+			});
+			})();
+		*/
+		(function(){
+			$('h2')
+			.bind('click',function(){
+				console.log('clicked');
+				$(this).clone(true).appendTo('body');
+				//bind function work on real tags not virtual tags h2
+				//bind fuction on virtual worked when clone is true
+			});
+			})();
+		</script>
+	</body>
+</html>
