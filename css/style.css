@@ -4,17 +4,17 @@ color:black;
 }
 dd{
 /* color: red; */
-border bottom: 1px solid black;
-margin: 1px;
-text-align: center;
-padding: 3px;
+	border bottom: 1px solid black;
+	margin: 1px;
+	text-align: center;
+	padding: 3px;
 }
 dl
 {
-margin: auto;
+	margin: auto;
 /* padding: 1em 0; */
-text-align: center;
-width: 500px;
+	text-align: center;
+	width: 500px;
 /* padding: 1em 0; */
 }
 dt
