@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Slides and Structure</title>
+	<style>
+
+	body {
+		background: #e3e3e3;
+		width: 600px;
+		margin: auto;
+		font-family: sans-serif;
+	}
+
+	#contact { 
+		background: #e3e3e3; 
+		padding: 1em 2em; 
+		position: relative;
+	}
+
+	.js #contact {
+		position: absolute;
+		top: 0;
+		width: inherit;
+		display: none;
+	}	
+
+	#contact h2 { margin-top: 0; }
+
+	#contact ul { padding: 0; }
+
+	#contact li { 
+		list-style: none;
+		margin-bottom: 1em;
+	}
+
+	/* Close button on form */
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-weight: bold;
+		font-family: sans-serif;
+		cursor: pointer;
+	}	
+
+	/* Form inputs */
+	input, textarea { width: 100%; line-height: 2em;}
+	input[type=submit] { width: auto;  }
+	label { display: block; text-align: left; }
+
+	</style>
+</head>
+<body>
+
+
+<article>
+	<h1>Beg Borrow by Steal</h1>
+	<p>
+		Each member from each team have to throw basketball and do basket. For each successful attempt, points will be provided to the team. And when they are done with basketball then 2 member from each team have to RUN and compete with each other and there will be given a set of mathematical question at a particular place. These two have to select a question from the set and solve it and by running they have to deliver the solution to us. Bonus points will be provided for first 3 teams to complete the task. Team will be given points accordingly with time they take to complete the task. (Questions are comprised of mathematical tricks, puzzles, or simple calculative).
+	</p>
+	<p>
+		Team will be provided with a LIST of the situations to take pictures. Each team have to click PICTURE of each given situation within the allotted Time. Team have to request or Beg someone to click those pictures of yours, performing the given situations. Some of the situations are as………
+	</p>
+	<p>
+		2 Members from each Team have to perform for the team. They have to BURST THE BALLOONS with foot lying on ground at random places within a particular area. The first member will be tied up with a band on his/her eye and the other one will have open eyes but his/her hand will be tied up. The two have to Co-operate with each other perform the task. After bursting the balloons, the two have to make a goal with football ( lying on ground ) to the goal post and after completion, There will be a set of questions of Physics lying near the goal post & you 2 have to select one and solve it and bring its solution to us by running. The quicker will be given points accordingly with respect to the time they take to complete the task.
+	</p>
+	<p>
+	The team have to beg to SHOPKEPPERS( Fida Hussain, MIR Prov.store, Ghasa canteen etc.) within the Campus for some Items and the team will be provided with points equal to the MRP of the items and the 1st , 2nd  & 3rd  one to come to us, will be given with BONOUS POINTS.
+	</p>
+</article>
+
+<div id="contact">
+	<h2>Contact Me</h2>
+	<form action="#">
+		<ul>
+			<li>
+				<label for="name">Name: </label>
+	 			<input name="name" id="name">
+			</li>
+
+			<li>
+				<label for="email">Email Address: </label>
+		 		<input name="email" id="email">
+			</li>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+			<li>
+				<label for="comments">What's Up?</label>
+				<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+			</li>
+			<li>
+				<input type="submit" value="Submit">
+			</li>
+		</ul>
+	</form>
+</div>
+
+<script src="js\jquery-3.1.0.js"></script>
+
+
+<script>
+
+(function() {
+	
+$('html').addClass('js');
+
+var contactForm = {
+
+	container: $('#contact'),
+
+	config: {
+		effect: 'slideToggle',
+		speed: 500
+	},
+
+	init: function(config) {
+		$.extend(this.config, config);
+
+		$('<button></button>', {
+			text: 'Contact Me'
+		})
+			.insertAfter( 'article:first' )
+			.on( 'click', this.show );
+	},
+
+	show: function() {
+		var cf = contactForm,
+			container = cf.container,
+			config = cf.config;
+
+		if ( container.is(':hidden') ) {
+			contactForm.close.call(container);
+			container[config.effect](config.speed);
+		}
+	},
+
+	close: function() {
+		var $this = $(this), // #contact
+			config = contactForm.config;
+
+		if ( $this.find('span.close').length ) return;
+
+		$('<span class=close>X</span>')
+			.prependTo(this)
+			.on('click', function() {
+				// this = span
+				$this[config.effect](config.speed);
+			})
+	}
+};
+
+contactForm.init({
+	// effect: 'fadeToggle',
+	speed: 300
+});
+
+})();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
