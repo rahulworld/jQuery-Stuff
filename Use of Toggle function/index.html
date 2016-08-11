@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Custom Effect Methods</title>
+	<style>
+	p { margin-top: 0;}
+	</style>
+</head>
+<body>
+
+<h1>Click Me</h1>
+
+<div class=content>
+	<p>
+	The team have to beg to SHOPKEPPERS( Fida Hussain, MIR Prov.store, Ghasa canteen etc.) within the Campus for some Items and the team will be provided with points equal to the MRP of the items and the 1st , 2nd  & 3rd  one to come to us, will be given with BONOUS POINTS.
+
+	2 Members from each Team have to perform for the team. They have to BURST THE BALLOONS with foot lying on ground at random places within a particular area. The first member will be tied up with a band on his/her eye and the other one will have open eyes but his/her hand will be tied up. The two have to Co-operate with each other perform the task. After bursting the balloons, the two have to make a goal with football ( lying on ground ) to the goal post and after completion, There will be a set of questions of Physics lying near the goal post & you 2 have to select one and solve it and bring its solution to us by running. The quicker will be given points accordingly with respect to the time they take to complete the task.
+	</p>
+	<p>
+	The team have to beg to SHOPKEPPERS( Fida Hussain, MIR Prov.store, Ghasa canteen etc.) within the Campus for some Items and the team will be provided with points equal to the MRP of the items and the 1st , 2nd  & 3rd  one to come to us, will be given with BONOUS POINTS.
+
+	2 Members from each Team have to perform for the team. They have to BURST THE BALLOONS with foot lying on ground at random places within a particular area. The first member will be tied up with a band on his/her eye and the other one will have open eyes but his/her hand will be tied up. The two have to Co-operate with each other perform the task. After bursting the balloons, the two have to make a goal with football ( lying on ground ) to the goal post and after completion, There will be a set of questions of Physics lying near the goal post & you 2 have to select one and solve it and bring its solution to us by running. The quicker will be given points accordingly with respect to the time they take to complete the task.
+	</p>	
+</div>
+
+
+
+<script src="js\jquery-3.1.0.js"></script>
+
+<script>
+
+(function() {
+	var content = $('div.content').hide();
+
+	jQuery.fn.flash = function( speed, easing, callback ) {
+		var $this = $(this);
+
+		return $this.slideDown(500, function() {
+	 		$this.delay(2000).slideUp(500);
+		});
+	};
+
+	$('h1').on('click', function() {
+		content.flash();
+	});	
+})();
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
